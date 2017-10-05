@@ -66,6 +66,14 @@
           color: lighten($secondary, 14%);
         }
       }
+      a.social-link-item-protonmail{
+        font-size: 85%;
+        color: $secondary;
+        &:hover,
+        &:focus {
+          color: lighten($secondary, 14%);
+        }
+      }
     }
   }
 }
