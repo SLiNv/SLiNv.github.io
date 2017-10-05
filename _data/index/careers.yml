@@ -1,0 +1,16 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name: Culturally Situated Design Tools, RPI
+  link: https://community.csdt.rpi.edu/about/
+  date: Summer 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Software Developer Intern
+
+- name: Center for Architecture Science and Ecology, RPI
+  link: http://case.rpi.edu/
+  date: Summer 2016
+  job: Software Developer Intern
+
+- name: MetPetDB
+  link: http://metpetdb.rpi.edu/
+  date: Spring 2015
+  job: Web Project Software Developer

@@ -1,13 +1,5 @@
 _site
-.DS_Store
-**/.DS_Store
-.idea
-*/*.iml
-*/*.ipr
-*/*.iws
-
-*/*/node_modules
-*/*/images-spec
-*/*/test
-*/*/CONTRIBUTING.md
-*/*/demo.html
+.sass-cache
+_config.yml
+_drafts
+.ruby-version

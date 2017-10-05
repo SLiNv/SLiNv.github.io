@@ -1,36 +1,30 @@
 ---
-layout: pageminimal
-title: Tag Index
-permalink: /tags/index.html
-description: "An archive of posts sorted by tag."
+layout: page
+title:  Tags
+permalink: /tags/
 ---
 
-<ul class="tag-box inline">
-{% assign tags_list = site.tags %}  
-  {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %} 
-    	<li><a href="#{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
-    {% endfor %}
-  {% else %}
-    {% for tag in tags_list %} 
-    	<li><a href="#{{ tag[0] }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
-    {% endfor %}
-  {% endif %}
-{% assign tags_list = nil %}
+<h5>Tag cloud <i class="fa fa-cloud info-text-color"></i></h5>
+<ul class="tag-cloud">
+{% for tag in site.tags %}
+  <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70  }}%">
+    <a class="post-tag" href="#{{ tag | first | slugize }}">
+      {{ tag | first }}
+    </a>
+  </li>
+{% endfor %}
 </ul>
 
-{% for tag in site.tags %} 
-	<h2 id="{{ tag[0] }}" style="color: #c91b26">{{ tag[0] }}</h2>
-	<ul class="post-list">
-		{% assign pages_list = tag[1] %}  
-		{% for post in pages_list %}
-			{% if post.title != null %}
-			{% if group == null or group == post.group %}
-			<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></a></li>
-			{% endif %}
-			{% endif %}
-		{% endfor %}
-		{% assign pages_list = nil %}
-		{% assign group = nil %}
-	</ul>
+<div class="tag-list">
+{% for tag in site.tags %}
+  <div class="tag-group">
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    <h5 class="tag-group-title" id="{{ tag_name | slugize }}">{{ tag_name }}</h5>
+    {% for post in site.tags[tag_name] %}
+    <article class="tag-item">
+      <a class="tag-item-title" href="{{ site.url }}{{ post.url }}">{{post.title}}</a>
+    </article>
+    {% endfor %}
+  </div>
 {% endfor %}
+</div>
