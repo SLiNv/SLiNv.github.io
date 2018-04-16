@@ -7,7 +7,7 @@ title: Victor Zhu
 email: zzy809@protonmail.com
 description: Heyy you have found me (*•̀ᴗ•́*)و.
 url: http://zhuzhuuu.com # the base hostname & protocol for your site
-keywords: ["Programming", "Cybersecurity", "Software Engineering"]
+keywords: ["Victor Zhu", "Programming", "Cybersecurity", "Software Engineering", "slinv"]
 
 #
 ###################################
@@ -36,7 +36,7 @@ owner:
   name: Victor Zhu
   avatar: zhu-yinke-300x300.png
   job: "Student & Software Engineer"
-  bio: "A Computer Science Student @ Rensselaer Polytechnic Institute who loves Cybersecurity. Favorite sport: Pentesting."
+  bio: "A Computer Science Student @ Rensselaer Polytechnic Institute who is intrigued by Cybersecurity. Favorite sport: Pentesting."
   email: me@zhuzhuuu.com
   protonmail: zzy809@protonmail.com
   disqus-shortname: zhuzhuuu
@@ -66,3 +66,6 @@ owner:
   flickr: #username
   codepen: #username
   telegram: slinvic #username
+
+plugins:
+  - jekyll-gist
