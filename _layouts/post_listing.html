@@ -48,9 +48,9 @@ layout: default
       {% if post.image.feature contains 'http' %}
       "{{ post.image.feature }}"
       {% else %}
-      "{{ site.url }}/img/{{ post.image.feature }}"
+      "{{ site.url }}/assets/upload/images/{{ post.image.feature }}"
       {% endif %}
-      alt="{{ post.title }} feature image">
+      alt="{{ post.title }} feature image" class="center feature-image">
 
       {% if post.image.credit %}
       <span class="image-credit">Photo Credit: <a href="{{ post.image.creditlink }}">{{ post.image.credit }}</a></span>

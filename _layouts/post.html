@@ -2,10 +2,13 @@
 layout: default
 ---
 
+{% comment %}
 <a class="btn" href= "{{ site.url }}/" >
   Home
 </a>
-{% if page.image.feature %}
+{% endcomment %}
+
+{% if page.image.feature and page.image.show %}
 <div class="post-image-feature">
   <img class="feature-image" src=
   {% if page.image.feature contains 'https' or page.image.feature contains 'http' %}

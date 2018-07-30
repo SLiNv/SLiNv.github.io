@@ -1,9 +1,14 @@
-<h1><span data-i18n="skills.my_skills">Bio</span></h1>
+<h2><span data-i18n="skills.my_skills">Professional Experience</span></h2>
 
 <div class="archive">
   <div class="timeline" id="timeline">
     {% for career in site.data.index.careers %}
-          <div class="archive-title"><div class="archive-year"><strong>{{ career.date }}</strong> {{ career.job }} @ <a href="{{ career.link }}">{{ career.name }}</a></div></div>
+      <div class="archive-title">
+       <div class="archive-year"><strong>{{ career.date }}</strong></br>
+         {{ career.job }} </br>
+         @ <a href="{{ career.link }}">{{ career.name }}</a>, {{ career.location }}
+       </div>
+      </div>
     {% endfor %}
   </div>
 </div>

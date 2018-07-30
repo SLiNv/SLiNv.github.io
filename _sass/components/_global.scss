@@ -121,6 +121,13 @@ footer {
   }
 }
 
+// center image helper class
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Scrollbar
 ::-webkit-scrollbar {
     width: 4px;

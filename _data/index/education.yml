@@ -1,4 +1,11 @@
 - name: Rensselaer Polytechnic Institute
+  major: M.S in Information Technology and Web Science
+  link: https://science.rpi.edu/itws
+  date: 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Current"></i>
+  descr: <br> (expected graduation in 2019)
+
+- name: Rensselaer Polytechnic Institute
+  major: B.S in Computer Science
   link: https://science.rpi.edu/computer-science
-  date: 2013 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
-  descr: <br> (expected graduation in 2017)
+  date: 2013 - 2017
+  descr: <br> 
