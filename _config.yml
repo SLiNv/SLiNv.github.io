@@ -69,3 +69,4 @@ owner:
 
 plugins:
   - jekyll-gist
+  - jemoji
