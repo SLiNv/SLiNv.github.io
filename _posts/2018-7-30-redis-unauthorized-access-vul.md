@@ -34,7 +34,6 @@ Environment setup for this example:
 	- Target machine: Redis-3.2.11 on Ubuntu
 	- Attack machine: Kali Linux
 
-&nbsp;
 #### Set Up Target Machine:
 
 First, let us set up the target machine with Redis. Download source code by
@@ -153,7 +152,7 @@ This vulnerability was found years ago and now still countless of machines are o
 
 According to Shodan, there are around **56,000 unprotected** Redis instances in 2015. 
 
-![shodan-twitter]({{ "/assets/upload/images/redis-unauth-acc-vul/shodan_twitter.png" | absolute_url }}){:class="post-image center"}
+![shodan-twitter]({{ "/assets/upload/images/redis-unauth-acc-vul/shodan_twit.png" | absolute_url }}){:class="post-image center"}
 
 According to ZoomEye, the distribution of the instances is.
 
