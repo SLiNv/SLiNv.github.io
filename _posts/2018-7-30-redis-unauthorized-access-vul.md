@@ -169,4 +169,4 @@ Okay, we need to get back to the business. So how do we verify if a server is pr
 2. Perform a GET request
 3. If the server is unprotected, you GET request will succeed; otherwise it will fail
 
-![redis-python-verify]({{ "/assets/upload/images/redis-unauth-acc-vul/redis-python.png" | absolute_url }}){:class="post-image center"}
+![redis-python-verify]({{ "/assets/upload/images/redis-unauth-acc-vul/redis_python.png" | absolute_url }}){:class="post-image center"}
