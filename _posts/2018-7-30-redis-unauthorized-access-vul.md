@@ -7,6 +7,7 @@ comments: true
 image:
   feature: redis-unauth-acc-vul/redis-unauthorized-access.png
   show: true
+tag: ['cybersecurity', 'pentesting', 'infosec', 'redis', 'vul-simulation']
 ---
 
 Redis, is an open source, widely popular data structure tool that can be used as an in-memory distributed database, message broker or cache. Since it is designed to be accessed inside trusted environments, it should not be exposed on the Internet. However, some Redis' are bind to public interface and even has no password authentication protection. 

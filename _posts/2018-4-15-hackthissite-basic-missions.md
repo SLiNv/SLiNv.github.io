@@ -7,6 +7,7 @@ comments: true
 image:
   feature: hackthissite_basic/header.jpg
   show: true
+tag: ['cybersecurity', 'pentesting', 'infosec', 'hackthissite']
 ---
 
 Before my write-up, I want to mention that I read some well-written write-ups/tutorials after solving the Basic Missions and they do a good job guiding you to the right direction without spoilers. And there are a ton of this kind of well-written write-ups out there, you should read some of them just too see how others attack the same problem and their angles.
