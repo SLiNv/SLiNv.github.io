@@ -2,9 +2,6 @@ _site
 .sass-cache
 _config.yml
 .ruby-version
-_drafts/2011-03-10-sample-post.md
-_drafts/2012-05-22-readability-post.md
-_drafts/2013-05-23-readability-feature-post.md
-_drafts/2013-08-12-sample-link-post.md
-_drafts/2013-08-16-code-highlighting-post.md
-_drafts/2015-08-18-welcome-to-jekyll.md
+
+# Dependency directories
+node_modules/

@@ -5,7 +5,7 @@ excerpt: "Hack This Site Basic Missions Write-up (Few Spoilers)"
 categories: [hacking-write-ups]
 comments: true
 image:
-  feature: https://data.htscdn.org/themes/Pink/images/header.jpg
+  feature: hackthissite_basic/header.jpg
   show: true
 ---
 
