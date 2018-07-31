@@ -24,7 +24,7 @@ The simplified flow of this exploit is:
 
 We should already be familiar how automatic SSH login with private + public keys works.
 
-### Simulation
+## Simulation
 
 Now let's get our hands wet and set up a target machine. We'll need two machines, they can be real machines, virtual machines, or remote machines (VPS). As long as the attack end is able to ping the target end, we are good.
 
@@ -170,3 +170,10 @@ Okay, we need to get back to the business. So how do we verify if a server is pr
 3. If the server is unprotected, you GET request will succeed; otherwise it will fail
 
 ![redis-python-verify]({{ "/assets/upload/images/redis-unauth-acc-vul/redis_python.png" | absolute_url }}){:class="post-image center"}
+
+
+## Mitigations
+
+- Don't bind to 0.0.0.0
+- If you have to, change the default port (6379)
+- Set a password (for everything)
