@@ -143,7 +143,7 @@ At the end of this section, I would like to show what is Redis's backup file loo
 
 Notice the unreadable characters? Add "\n\n" before and after the key content was just to be safe and separate it from other "stuff" so that it can be parsed correctly. :ok_hand:
 
-### Use Search Engine to find Vulnerable Redis Servers
+## Use Search Engine to find Vulnerable Redis Servers
 
 Alrighty, as I mentioned, we are going to use [Shodan](https://www.shodan.io/) to search servers that has Redis footprint (characteristics).
 
