@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "CSAW CTF Quals '18 Ldab - Web 50 Write-Up [LDAP Injection]"
-excerpt: "CSAW CTF Qualification Round 2018 Web 50 Ldab Write-up [LDAP Injection]"
+title: "CSAW CTF Quals '18 Ldab - Web 50 Write-Up (LDAP Injection)"
+excerpt: "CSAW CTF Qualification Round 2018 Web 50 Ldab Write-up - LDAP Injection"
 categories: [hacking-write-ups]
 comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'csaw', 'write-up', 'LDAP injection']

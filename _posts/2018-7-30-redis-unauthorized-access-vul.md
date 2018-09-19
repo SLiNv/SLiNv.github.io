@@ -5,7 +5,7 @@ excerpt: "If a Redis is publicly accessible and is not protected by password, a 
 categories: [pentesting-simulation]
 comments: true
 image:
-  feature: redis-unauth-acc-vul/redis-unauthorized-access.png
+  feature: redis-unauth-acc-vul/redis-unauthorized-access-small.png
   show: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'redis', 'vul-simulation']
 ---
