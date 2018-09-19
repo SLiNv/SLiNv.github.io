@@ -5,6 +5,9 @@ excerpt: "CSAW CTF Qualification Round 2018 Web 50 Ldab Write-up - LDAP Injectio
 categories: [hacking-write-ups]
 comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'csaw', 'write-up', 'LDAP injection']
+image:
+  feature: csaw_quals/csawlogo.png
+  show: true
 ---
 
 ![ldap_chal][1]{:class="post-image center"}
