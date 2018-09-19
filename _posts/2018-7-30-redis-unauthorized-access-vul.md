@@ -13,7 +13,7 @@ tag: ['cybersecurity', 'pentesting', 'infosec', 'redis', 'vul-simulation']
 Redis, is an open source, widely popular data structure tool that can be used as an in-memory distributed database, message broker or cache. Since it is designed to be accessed inside trusted environments, it should not be exposed on the Internet. However, some Redis' are bind to public interface and even has no password authentication protection. 
 
 
-Under certain conditions, if Redis runs with the root account, attackers can write an SSH public key file to the root account, directly logging on to the victim server through SSH. This may allow hackers to gain server privileges and delete or steal data, or even lead to an encryption extortion, critically endangering normal business services.
+Under certain conditions, if Redis runs with the root account (or not even), attackers can write an SSH public key file to the root account, directly logging on to the victim server through SSH. This may allow hackers to gain server privileges, delete or steal data, or even lead to an encryption extortion, critically endangering normal business services.
 
 
 The simplified flow of this exploit is:
@@ -27,7 +27,7 @@ We should already be familiar how automatic SSH login with private + public keys
 
 ## Simulation
 
-Now let's get our hands wet and set up a target machine. We'll need two machines, they can be real machines, virtual machines, or remote machines (VPS). As long as the attack end is able to ping the target end, we are good.
+Now let's get our feet wet and set up a target machine. We'll need two machines, they can be real machines, virtual machines, or remote machines (VPS). As long as the attack end is able to ping the target end, we are good.
 
 
 Environment setup for this example:
@@ -49,22 +49,22 @@ cd redis-3.2.11
 make
 ```
 
-After make, we can use our favorite editor to open ```redis.conf``` in ```redis-3.2.11``` folder. In order to be remotely accessed, we will comment out line ```bind 127.0.0.1``` and disable ```protected-mode``` as shown below.
+After make, we can use our favorite editor to open ```redis.conf``` in ```redis-3.2.11``` folder. In order to be remotely accessed, we will need to comment out line ```bind 127.0.0.1``` and disable ```protected-mode``` as shown below.
 
 ![redis.conf]({{ "/assets/upload/images/redis-unauth-acc-vul/redis.conf.png" | absolute_url }}){:class="post-image center"}
 
-Now we should fire up Redis with the configuration file we just edited. Note that ```redis-server``` is in ```redis-3.2.11/src```.
+Now fire up Redis with the configuration file we just edited. Note that ```redis-server``` is in ```redis-3.2.11/src```.
 
 ```bash
 src/redis-server redis.conf
 ```
 
-Now we have finished setting up the targer server. Additionally, we should also check if we have ```.ssh``` folder. If not, we should create it for the attack later. 
+So far, we have finished setting up the targer server. Additionally, we should also check if we have ```.ssh``` folder. If not, we should create it for the attack later. 
 
 
 #### Attack Machine:
 
-First, make sure we can ping the target. Then, we will generate a private key and public key for SSHing into the target maching later. Run the following command to generate keys and leave passphrase empty.
+First, make sure we can ping the target. Then, we will generate a private key and public key for SSHing into the target machine later. Run the following command to generate SSH keys and leave passphrase empty.
 ```bash
 ssh-keygen -t rsa
 ```
@@ -86,11 +86,11 @@ We are going to use ```redis-cli```, the Redis command line interface, to send c
 Run the following commands in ```redis-3.2.11/src``` folder. (Or depending where we are, we can always specify the path to the files we use)
 
 ```bash
-#our SSH public key|              Remote Redis IP   Command key
+#our SSH public key|            Remote Redis IP | Command | key file
 cat /.ssh/temp.txt | redis-cli -h 203.137.255.255 -x set s-key
 ```
 
-Here, let us take a look at the command. We use ```-h``` flag to specify the remote Redis server IP so that ```redis-cli``` knows where to connect and send commands. The part after ```-x``` is saying that we are setting the key named ```s-key``` with the value in ```temp.txt```. 
+Here, let's' take a look at the command. We use ```-h``` flag to specify the remote Redis server IP so that ```redis-cli``` knows where to connect and send commands. The part after ```-x``` is saying that we are setting the key in redis named ```s-key``` with the value in ```temp.txt```. 
 
 ![set-key]({{ "/assets/upload/images/redis-unauth-acc-vul/set_key.png" | absolute_url }}){:class="post-image center"}
 
@@ -119,7 +119,11 @@ save
 > The authorized_keys file in SSH specifies the SSH keys that can be used for logging into the user account for which the file is configured 
 > Source: [ssh.com](https://www.ssh.com/ssh/authorized_keys/)
 
-#### Woohoo, Harvest Time
+
+The screenshot shown above already demonstrates the steps mentioned here.
+
+
+#### Harvest Time
 
 On Attack Machine, try to SSH in the Target Machine using the following command.
 
@@ -131,7 +135,7 @@ ssh -i id_rsa username@203.137.255.255
 ![sshkey-auth-login]({{ "/assets/upload/images/redis-unauth-acc-vul/sshkey_auth_login.png" | absolute_url }}){:class="post-image center"}
 
 
-YAS! As we can see, we have a successful auto-login with SSH keys! Voila voila, we have now completed the attack simulation. :smile: (Smiley face actually means that I'm finally almost done writing this up :sob:)
+YAS! As we can see, we have a successful auto-login with SSH keys! Voila, we have now completed the attack simulation. :smile: (Smiley face actually means that I'm finally almost done writing this up :joy:)
 
 At the end of this section, I would like to show what is Redis's backup file look like.
 
@@ -139,9 +143,9 @@ At the end of this section, I would like to show what is Redis's backup file loo
 
 Notice the unreadable characters? Add "\n\n" before and after the key content was just to be safe and separate it from other "stuff" so that it can be parsed correctly. :ok_hand:
 
-### Use Search Engine to find Vulnerable Redis Servers
+## Use Search Engine to find Vulnerable Redis Servers
 
-Alrighty alrighty, as I mentioned, we are going to use [Shodan](https://www.shodan.io/) to search servers that has Redis footprint (characteristics).
+Alrighty, as I mentioned, we are going to use [Shodan](https://www.shodan.io/) to search servers that has Redis footprint (characteristics).
 
 Let us do a simple search by Redis' default port.
 
@@ -163,7 +167,7 @@ The top ranking countries of these instances are: China, USA, Germany...
 
 ![zoomeye-dist-rank]({{ "/assets/upload/images/redis-unauth-acc-vul/zoomeye_dist_rank.png" | absolute_url }}){:class="post-image center"}
 
-Okay, we need to get back to the business. So how do we verify if a server is protected using python? It turns out to be fairly simple.
+Okay, back to the business. So how do we verify if a server is protected using python? It turns out to be fairly simple.
 
 1. Use socket to connect to the target IP
 2. Perform a GET request
@@ -172,7 +176,7 @@ Okay, we need to get back to the business. So how do we verify if a server is pr
 ![redis-python-verify]({{ "/assets/upload/images/redis-unauth-acc-vul/redis_python.png" | absolute_url }}){:class="post-image center"}
 
 
-## Mitigations
+## Mitigation
 
 - Don't bind to 0.0.0.0
 - If you have to, change the default port (6379)
