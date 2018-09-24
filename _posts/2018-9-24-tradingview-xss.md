@@ -5,6 +5,9 @@ excerpt: "TradingView Charting Library XSS Vulnerablity, high impact"
 categories: [Vulnerablity]
 comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'Vulnerablity', 'xss', 'TradingView']
+image:
+  feature: tradingview_xss/xss_cover.png
+  show: true
 ---
 
 ## 0x00 Background
@@ -30,7 +33,7 @@ https://www.xxxxx.com/static/charting_library/static/tv-chart.630b704a2b9d0eaf15
 ![alert][1]{:class="post-image center"}
 
 
-Minimum requited set of parameters: [disabledFeatures, enabledFeatures, indicatorsFile]
+Minimum required set of parameters: [**disabledFeatures**, **enabledFeatures**, **indicatorsFile**]
 
 After all, it turned out to be easy to understand the vulnerability. Let's look at library.xxxx.js under ```charting_library/static/bundles/```
 
