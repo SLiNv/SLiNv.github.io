@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Simulating Redis Unauthorized Access Vulnerability"
+title: "Redis Unauthorized Access Vulnerability Lab"
 excerpt: "If a Redis is publicly accessible and is not protected by password, a remote attacker can exploit this to gain unauthorized access to the server. Let's learn how to set up a vulnerable redis server and attack it. We will also explore how to search and verify vulnerable redis out there with powerful search engine Shodan and automated python exploit"
-categories: [pentesting-simulation]
+categories: [pentesting-lab]
 comments: true
 image:
   feature: redis-unauth-acc-vul/redis-unauthorized-access-small.png
   show: true
-tag: ['cybersecurity', 'pentesting', 'infosec', 'redis', 'vul-simulation']
+tag: ['cybersecurity', 'pentesting', 'infosec', 'redis', 'vul-lab']
 ---
 
 Redis, is an open source, widely popular data structure tool that can be used as an in-memory distributed database, message broker or cache. Since it is designed to be accessed inside trusted environments, it should not be exposed on the Internet. However, some Redis' are bind to public interface and even has no password authentication protection. 
