@@ -4,9 +4,9 @@ title: "TradingView Charting Library XSS Vulnerablity"
 excerpt: "TradingView Charting Library XSS Vulnerablity, high impact"
 categories: [Vulnerablity]
 comments: true
-tag: ['cybersecurity', 'pentesting', 'infosec', 'Vulnerablity', 'xss', 'TradingView']
+tag: ['cybersecurity', 'pentesting', 'infosec', 'Vulnerablity', 'xss', 'TradingView', 'web app security']
 image:
-  feature: tradingview_xss/xss_cover.png
+  feature: tradingview-xss/xss_cover.png
   show: true
 ---
 
@@ -72,7 +72,7 @@ In the file we have seen, ```/charting_library/static/bundles/library.19c99ed5d0
 
 
 
-[1]: {{ "/assets/upload/images/tradingview_xss/alert.png" | absolute_url }}
-[2]: {{ "/assets/upload/images/tradingview_xss/indicatorsFile_code.png" | absolute_url }}
-[3]: {{ "/assets/upload/images/tradingview_xss/getscript.png" | absolute_url }}
-[4]: {{ "/assets/upload/images/tradingview_xss/two_params.png" | absolute_url }}
+[1]: {{ "/assets/upload/images/tradingview-xss/alert.png" | absolute_url }}
+[2]: {{ "/assets/upload/images/tradingview-xss/indicatorsFile-code.png" | absolute_url }}
+[3]: {{ "/assets/upload/images/tradingview-xss/getscript.png" | absolute_url }}
+[4]: {{ "/assets/upload/images/tradingview-xss/two-params.png" | absolute_url }}

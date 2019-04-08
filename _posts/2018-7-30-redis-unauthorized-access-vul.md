@@ -92,11 +92,11 @@ cat /.ssh/temp.txt | redis-cli -h 203.137.255.255 -x set s-key
 
 Here, let's' take a look at the command. We use ```-h``` flag to specify the remote Redis server IP so that ```redis-cli``` knows where to connect and send commands. The part after ```-x``` is saying that we are setting the key in redis named ```s-key``` with the value in ```temp.txt```. 
 
-![set-key]({{ "/assets/upload/images/redis-unauth-acc-vul/set_key.png" | absolute_url }}){:class="post-image center"}
+![set-key]({{ "/assets/upload/images/redis-unauth-acc-vul/set-key.png" | absolute_url }}){:class="post-image center"}
 
 Yea, we have a key with our SSH key sneaked in! Let's connect to the Redis and play around its configuration. Use ```redis-cli``` to connect to the Redis server again.
 
-![set-backup-dir]({{ "/assets/upload/images/redis-unauth-acc-vul/set_backup_dir.png" | absolute_url }}){:class="post-image center"}
+![set-backup-dir]({{ "/assets/upload/images/redis-unauth-acc-vul/set-backup-dir.png" | absolute_url }}){:class="post-image center"}
 
 Looking at the above screenshot, we first verify the value of the key ```s-key``` by using the command ```GET s-key```, which is what we want -- the public key with two blank lines before and after. Then I tried the command "dir" just to see what it says (kidding). What we actually want to do here is to get the value of "s-key" (SSH public key) stored in the ```.ssh``` folder so that we can remote SSH login to the target machine whithout having to type the password.
 
@@ -132,14 +132,14 @@ On Attack Machine, try to SSH in the Target Machine using the following command.
 ssh -i id_rsa username@203.137.255.255
 ```
 
-![sshkey-auth-login]({{ "/assets/upload/images/redis-unauth-acc-vul/sshkey_auth_login.png" | absolute_url }}){:class="post-image center"}
+![sshkey-auth-login]({{ "/assets/upload/images/redis-unauth-acc-vul/sshkey-auth-login.png" | absolute_url }}){:class="post-image center"}
 
 
 YAS! As we can see, we have a successful auto-login with SSH keys! Voila, we have now completed the attack simulation. :smile: (Smiley face actually means that I'm finally almost done writing this up :joy:)
 
 At the end of this section, I would like to show what is Redis's backup file look like.
 
-![sshkey-auth-login]({{ "/assets/upload/images/redis-unauth-acc-vul/sshkey_auth_login.png" | absolute_url }}){:class="post-image center"}
+![sshkey-auth-login]({{ "/assets/upload/images/redis-unauth-acc-vul/sshkey-auth-login.png" | absolute_url }}){:class="post-image center"}
 
 Notice the unreadable characters? Add "\n\n" before and after the key content was just to be safe and separate it from other "stuff" so that it can be parsed correctly. :ok_hand:
 
@@ -157,15 +157,15 @@ This vulnerability was found years ago and now still countless of machines are o
 
 According to Shodan, there are around **56,000 unprotected** Redis instances in 2015. 
 
-![shodan-twitter]({{ "/assets/upload/images/redis-unauth-acc-vul/shodan_twit.png" | absolute_url }}){:class="post-image center"}
+![shodan-twitter]({{ "/assets/upload/images/redis-unauth-acc-vul/shodan-twit.png" | absolute_url }}){:class="post-image center"}
 
 According to ZoomEye, the distribution of the instances is.
 
-![zoomeye-dist]({{ "/assets/upload/images/redis-unauth-acc-vul/zoomeye_dist.png" | absolute_url }}){:class="post-image center"}
+![zoomeye-dist]({{ "/assets/upload/images/redis-unauth-acc-vul/zoomeye-dist.png" | absolute_url }}){:class="post-image center"}
 
 The top ranking countries of these instances are: China, USA, Germany...
 
-![zoomeye-dist-rank]({{ "/assets/upload/images/redis-unauth-acc-vul/zoomeye_dist_rank.png" | absolute_url }}){:class="post-image center"}
+![zoomeye-dist-rank]({{ "/assets/upload/images/redis-unauth-acc-vul/zoomeye-dist-rank.png" | absolute_url }}){:class="post-image center"}
 
 Okay, back to the business. So how do we verify if a server is protected using python? It turns out to be fairly simple.
 
@@ -173,7 +173,7 @@ Okay, back to the business. So how do we verify if a server is protected using p
 2. Perform a GET request
 3. If the server is unprotected, you GET request will succeed; otherwise it will fail
 
-![redis-python-verify]({{ "/assets/upload/images/redis-unauth-acc-vul/redis_python.png" | absolute_url }}){:class="post-image center"}
+![redis-python-verify]({{ "/assets/upload/images/redis-unauth-acc-vul/redis-python.png" | absolute_url }}){:class="post-image center"}
 
 
 ## Mitigation

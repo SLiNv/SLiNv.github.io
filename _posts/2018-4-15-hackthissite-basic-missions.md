@@ -5,7 +5,7 @@ excerpt: "Hack This Site Basic Missions Write-up (Few Spoilers)"
 categories: [hacking-write-ups]
 comments: true
 image:
-  feature: hackthissite_basic/header.jpg
+  feature: hackthissite-basic/header.jpg
   show: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'hackthissite']
 ---

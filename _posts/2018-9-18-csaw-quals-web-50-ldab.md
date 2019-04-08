@@ -37,8 +37,8 @@ Then we got the flag.
 FLAG: flag{ld4p_inj3ction_i5_a_th1ng} indeed
 
 
-[1]: {{ "/assets/upload/images/csaw_quals/ldab_chal.png" | absolute_url }}
-[2]: {{ "/assets/upload/images/csaw_quals/ldab_app.png" | absolute_url }}
+[1]: {{ "/assets/upload/images/csaw-quals/ldab-chal.png" | absolute_url }}
+[2]: {{ "/assets/upload/images/csaw-quals/ldab-app.png" | absolute_url }}
 [3]: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/LDAP%20injection
-[4]: {{ "/assets/upload/images/csaw_quals/ldab_payload.png" | absolute_url }}
-[5]: {{ "/assets/upload/images/csaw_quals/ldab_flag.png" | absolute_url }}
+[4]: {{ "/assets/upload/images/csaw_quals/ldab-payload.png" | absolute_url }}
+[5]: {{ "/assets/upload/images/csaw_quals/ldab-flag.png" | absolute_url }}
