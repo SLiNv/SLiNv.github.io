@@ -6,7 +6,7 @@ categories: [hacking-write-ups]
 comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'csaw', 'write-up', 'LDAP injection']
 image:
-  feature: csaw_quals/csawlogo.png
+  feature: csaw-quals/csawlogo.png
   show: true
 ---
 

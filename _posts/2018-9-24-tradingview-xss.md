@@ -6,7 +6,7 @@ categories: [Vulnerablity]
 comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'Vulnerablity', 'xss', 'TradingView', 'web app security']
 image:
-  feature: tradingview-xss/xss_cover.png
+  feature: tradingview-xss/xss-cover.png
   show: true
 ---
 
@@ -41,18 +41,18 @@ After all, it turned out to be easy to understand the vulnerability. Let's look 
 D ? $.getScript(urlParams.indicatorsFile).done(function() {...})
 ```
 
-![alert][2]{:class="post-image center"}
+![indicators-File-code][2]{:class="post-image center"}
 
 
 Looks familiar? I believe that you probably have seen jQuery's ```$.getScript$``` many times either when programming or digging bugs. So the core code for this function is essentially...
 
-![jquery_getscript][3]{:class="post-image center"}
+![jquery-getscript][3]{:class="post-image center"}
 
 According to the source code, we can dynamically create a script tag and load a remote js file. 
 
 Then, why are ```disabledFeatures``` and ```enabledFeatures``` also needed for the payload? We can tell from the code... that there will be an exception thrown if one of these parameters is not provided.
 
-![two_params][4]{:class="post-image center"}
+![two-params][4]{:class="post-image center"}
 
 Therefore, the final payload was the one mentioned before.
 
