@@ -35,12 +35,12 @@ kramdown:
 owner:
   name: Victor Zhu
   avatar: zhu-yinke-300x300.png
-  job: "Student & Software Engineer"
-  bio: "A Computer Science Student @ Rensselaer Polytechnic Institute who is intrigued by Cybersecurity. Favorite sport: Hack."
+  job: "Security Analyst - Red Team"
+  bio: "Black cat hacker"
   email: me@zhuzhuuu.com
   protonmail: victor.zhu@protonmail.com
   disqus-shortname: zhuzhuuu
-  twitter: zzy809 #username
+  twitter: _____vic______ #username
   facebook: #username
   google:
     plus: #username
@@ -65,7 +65,7 @@ owner:
   weibo: #username
   flickr: #username
   codepen: #username
-  telegram: slinvic #username
+  telegram: #username
 
 plugins:
   - jekyll-gist

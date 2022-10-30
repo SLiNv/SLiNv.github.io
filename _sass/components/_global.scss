@@ -102,6 +102,12 @@ a {
 
 // Footer
 footer {
+  // CUSTOM START --------
+  // Added this condition to match _post.scss - [section.post] width behavior
+  @media only screen and (min-width: 1500px){
+    width: 70%;
+  }
+  // CUSTOM END --------
   text-align: center;
   padding: 3em 0;
   .heart-icon {

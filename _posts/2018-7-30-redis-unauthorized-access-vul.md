@@ -6,7 +6,7 @@ categories: [pentesting-lab]
 comments: true
 image:
   feature: redis-unauth-acc-vul/redis-unauthorized-access-small.png
-  show: true
+  show: false
 tag: ['cybersecurity', 'pentesting', 'infosec', 'redis', 'vul-lab']
 ---
 

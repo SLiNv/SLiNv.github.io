@@ -7,7 +7,7 @@ comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'Vulnerablity', 'xss', 'TradingView', 'web app security']
 image:
   feature: tradingview-xss/xss-cover.png
-  show: true
+  show: false
 ---
 
 ## 0x00 Background

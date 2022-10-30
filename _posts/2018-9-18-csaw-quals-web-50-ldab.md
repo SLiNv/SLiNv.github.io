@@ -7,7 +7,7 @@ comments: true
 tag: ['cybersecurity', 'pentesting', 'infosec', 'csaw', 'write-up', 'LDAP injection']
 image:
   feature: csaw-quals/csawlogo.png
-  show: true
+  show: false
 ---
 
 ![ldap_chal][1]{:class="post-image center"}

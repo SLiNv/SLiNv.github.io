@@ -6,7 +6,7 @@ categories: [hacking-write-ups]
 comments: true
 image:
   feature: hackthissite-basic/header.jpg
-  show: true
+  show: false
 tag: ['cybersecurity', 'pentesting', 'infosec', 'hackthissite']
 ---
 

@@ -30,7 +30,26 @@
 
 // Post Section
 section.post {
-	margin-bottom: 80px;
+  // margin-bottom: 80px;     // [CUSTOM] COMMENTED OUT
+  // CUSTOM START --------
+	margin-bottom: 50px;
+  width: 100%;
+  // CUSTOM: added to enhance readability in big screen
+  @media only screen and (min-width: 1500px){
+    width: 70%;
+  }
+  
+  // CUSTOM: this p is specifically for post-meta in index's post listing
+  p{
+    margin-bottom: 0;
+  }
+  h3{
+    margin-top: 0;
+  }
+  .post-description p{
+    margin-top: 0;
+  }
+  // CUSTOM END --------
 }
 
 // Back home button

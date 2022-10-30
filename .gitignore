@@ -2,6 +2,7 @@ _site
 .sass-cache
 _config.yml
 .ruby-version
+_drafts
 
 # Dependency directories
 node_modules/

@@ -1,28 +1,41 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
-- name: Eaton Corporation - Lighting
+
+- job: Security Analyst - Red Team
+  name: Citi
+  location: New York, NY
+  link: https://citi.com/
+  date: Mar 2022 - <i class="fa fa-clock-o" aria-hidden="true" title="Current"></i>
+
+- job: Offensive Security Engineer Intern
+  name: Facebook
+  location: Menlo Park, CA
+  link: https://www.metacareers.com/areas-of-work/security/
+  date: May 2019 - Aug 2019
+  
+- job: Software Engineer Co-Op (Intern)
+  name: Eaton Corporation - Lighting
   location: Syracuse, NY
   link: https://ephesuslighting.com/
   date: Jan 2018 - Aug 2018
-  job: Software Engineer Co-Op (Intern)
 
-- name: Culturally Situated Design Tools
+- job: Software Engineer Researcher
+  name: Culturally Situated Design Tools
   location: Rensselaer Polytechnic Institute
   link: https://community.csdt.rpi.edu/about/
   date: May 2017 - Aug 2017
-  job: Software Engineer Researcher
 
-- name: Culturally Situated Design Tools
+- job: Software Engineer Researcher
+  name: Culturally Situated Design Tools
   location: Rensselaer Polytechnic Institute
   link: https://community.csdt.rpi.edu/about/
   date: Jan 2017 - May 2017
-  job: Software Engineer Researcher
 
-- name: Center for Architecture Science and Ecology
+- job: Software Engineer Researcher
+  name: Center for Architecture Science and Ecology
   location: Rensselaer Polytechnic Institute
   link: http://case.rpi.edu/
   date: May 2016 - Aug 2017
-  job: Software Engineer Researcher
 
 - name: MetPetDB
   location: Rensselaer Polytechnic Institute

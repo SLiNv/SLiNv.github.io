@@ -1,4 +1,10 @@
+- name: Malware-Loader-EDR-Bypass
+  descr: EDR bypass project developed in C/C++ with techniques like NTDLL patching, direct syscalls, indirect syscalls, ETW patching and etc.
+
+- name: Ransonware Based on Leaked Conti Ransomware
+  descr: A simplified version of Conti's leaked ransomware v2 in C++ used in purple team exercise in 2022 to gauge effectiveness of security controls including EDR and AV.
+
 - name: Django-Git-TinyMCE
-  descr: "Django-Git-TinyMCE is designed to act as a private git server, from which teachers can add new content or change old content using the tinymce wiziwig to fit their classroom and needs, while simultaneously sharing that content to help other teachers with their work."
+  descr: Django-Git-TinyMCE is designed to act as a private git server, from which teachers can add new content or change old content using the tinymce wiziwig to fit their classroom and needs, while simultaneously sharing that content to help other teachers with their work.
   image: favicon.png
   github: https://github.com/slinv/django_git_tinymce
